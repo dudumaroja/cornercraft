@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.squaredwaita" path="/org/gnome/shell/extensions/squaredwaita/">
+<key name="windows-radius" type="i">
+  <default>12</default>
+  <summary>Windows radius</summary>
+</key>
+<key name="switch-radius" type="i">
+  <default>12</default>
+  <summary>Switch radius (also radio/slider)</summary>
+</key>
+    </schema>
+</schemalist>
