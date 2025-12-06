@@ -1,17 +1,9 @@
 {
-  "description": "Change themes corners-radius on gtk themes making then more round or square on the fly.",
-  "donations": {
-    "kofi": "dudumaroja"
-  },
-  "name": "2 Wallpapers",
+  "description": "Adjust GTK theme corner radii (border-radius) live.",
+  "name": "CornerCraft",
   "settings-schema": "org.gnome.shell.extensions.cornercraft",
-  "shell-version": [
-    "45",
-    "46",
-    "47",
-    "48",
-    "49"
-  ],
+  "shell-version": ["45", "46", "47", "48", "49"],
   "url": "https://github.com/dudumaroja/cornercraft/",
-  "uuid": "cornercraft@dudumaroja",
+  "uuid": "cornercraft@dudumaroja"
 }
+

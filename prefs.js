@@ -7,7 +7,7 @@ import GLib from 'gi://GLib';
 const RADIUS_WINDOWS_KEY = 'windows-radius';
 const RADIUS_SWITCH_KEY = 'switch-radius';  
 
-export default class SquaredwaitaPreferences extends ExtensionPreferences {
+export default class cornercraftPreferences extends ExtensionPreferences {
   fillPreferencesWindow(window) {
     const preferences = this;
     preferences.settings = preferences.getSettings();
@@ -96,7 +96,7 @@ export default class SquaredwaitaPreferences extends ExtensionPreferences {
     let css = '';
     if (!restore) {
       css = `
-/* windows corners set by squaredwaita START*/
+/* windows corners set by cornercraft START*/
 * {
   border-radius: ${this.settings.get_int(RADIUS_WINDOWS_KEY)}px;
 }
@@ -104,7 +104,7 @@ export default class SquaredwaitaPreferences extends ExtensionPreferences {
 radio, .radio, switch, switch slider {
   border-radius: ${this.settings.get_int(RADIUS_SWITCH_KEY)}px;
 }
-/* windows corners set by squaredwaita END */
+/* windows corners set by cornercraft END */
 `;
     }
 
@@ -117,7 +117,7 @@ radio, .radio, switch, switch slider {
       if (GLib.file_test(path, GLib.FileTest.EXISTS)) {
         content = GLib.file_get_contents(path)[1].toString();
         // Remove old CSS
-        content = content.replace(/\/\* windows corners set by squaredwaita START\*\/[\s\S]*?\/\* windows corners set by squaredwaita END \*\//, '');
+        content = content.replace(/\/\* windows corners set by cornercraft START\*\/[\s\S]*?\/\* windows corners set by cornercraft END \*\//, '');
       }
       // Add new CSS
       GLib.file_set_contents(path, content + css);

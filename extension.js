@@ -1,6 +1,6 @@
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-export default class SquaredwaitaExtension extends Extension {
+export default class cornercraftExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
     }
