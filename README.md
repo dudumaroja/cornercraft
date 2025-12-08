@@ -24,7 +24,7 @@ The app does this by writing custom CSS to your ~/.config/gtk-3.0/gtk.css and ~/
 
 ## Installation
 
-(Installation instructions will go here, referencing the `install.sh` script)
+Just clone and use the install script provided
 
 ## Usage
 
