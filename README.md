@@ -3,7 +3,11 @@
 [![License](https://img.shields.io/badge/License-GPL%20v2%2B-orange.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![Kofi](https://img.shields.io/badge/Kofi-tips-green.svg)](https://ko-fi.com/dudumaroja)
 
+
+
 ## Description
+
+<img width="512" height="512" alt="icon" src="https://github.com/user-attachments/assets/cec8b670-7248-4ac2-9b7a-72444e5a9ce5" />
 
 CornerCraft lets you control how rounded your Adwaita apps look.
 
