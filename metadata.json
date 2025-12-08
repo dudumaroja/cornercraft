@@ -1,9 +1,0 @@
-{
-  "description": "Adjust GTK theme corner radii (border-radius) live.",
-  "name": "CornerCraft",
-  "settings-schema": "org.gnome.shell.extensions.cornercraft",
-  "shell-version": ["45", "46", "47", "48", "49"],
-  "url": "https://github.com/dudumaroja/cornercraft/",
-  "uuid": "cornercraft@dudumaroja"
-}
-

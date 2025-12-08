@@ -1,69 +1,39 @@
-# CornerCraft GNOME Shell Extension: Live Corner Radius Customization
+# CornerCraft: Live Corner Radius Customization
 
-[![GNOME Version](https://img.shields.io/badge/GNOME-45%2B-blue.svg)](https://extensions.gnome.org/extension/8748/cornercraft/)
 [![License](https://img.shields.io/badge/License-GPL%20v2%2B-orange.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
-[![GNOME Extensions](https://img.shields.io/badge/GNOME-Extensions-red.svg)](https://extensions.gnome.org/extension/8748/cornercraft/)
 [![Kofi](https://img.shields.io/badge/Kofi-tips-green.svg)](https://ko-fi.com/dudumaroja)
 
 ## Description
 
-CornerCraft is a simple yet powerful GNOME Shell extension that allows you to live-adjust the corner radii (border-radius) of your GTK 3 and GTK 4 applications and UI elements. Whether you prefer sharper, more squared corners or a softer, rounder aesthetic, CornerCraft provides granular control to customize the look and feel of your desktop. This extension directly modifies your theme's appearance by injecting CSS into your `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` files.
+Are you a fan of Adwaita, but wish you had a say in its curves? Do you yearn for an interface that's just a little bit more, or a little bit less, rounded? CornerCraft is here to give you that control! This simple yet powerful application empowers you to precisely adjust the corner radii (border-radius) of your GTK 3 and GTK 4 applications and UI elements. From sharper, more squared edges to a delightfully smooth, round aesthetic, CornerCraft puts the customization in your hands. It works its magic by injecting custom CSS directly into your `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css` files, giving you a desktop that truly reflects your style.
 
 ## Features
 
-*   **Live Customization:** Adjust corner radii instantly without restarting GNOME Shell.
 *   **Granular Control:** Independently set radii for:
     *   **Windows & General Elements:** Applies to most application windows and UI components.
     *   **Radio Buttons, Switches & Sliders:** Specific control for these interactive elements.
-*   **Compatibility:** Works with Adwaita and other GTK themes by directly modifying CSS.
-*   **Restore Defaults:** Easily revert to Adwaita's default corner settings (12px).
+    *   **Buttons:** Tailor the curvature of all your buttons.
+    *   **Text Inputs:** Define the roundness of entry fields and text views.
+    *   **Menus & Popovers:** Customize the corners of context menus and pop-up windows.
+*   **Unified Control (Lock Option):** Effortlessly synchronize all corner radius values with a single toggle. Adjust one, and the rest follow suit, or unlock them for individual fine-tuning.
+*   **Compatibility:** Works seamlessly with Adwaita and other GTK themes.
+*   **Restore Defaults:** Instantly revert to Adwaita's default corner settings (12px) and clear any custom CSS.
+*   **Internationalization:** Available in multiple languages to suit your preference.
 
 ## Installation
 
-### Via extensions.gnome.org (Recommended)
-
-The easiest way to install CornerCraft is directly from the official GNOME Extensions website:
-
-1.  Visit the [CornerCraft extension page](https://extensions.gnome.org/extension/8748/cornercraft/).
-2.  Toggle the switch to "ON" to install and enable the extension.
-3.  Open the GNOME Extensions application (or `gnome-extensions-app`) to access its preferences.
-
-### Manual Installation
-
-If you prefer to install manually or for development purposes:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/dudumaroja/cornercraft.git ~/.local/share/gnome-shell/extensions/cornercraft@dudumaroja
-    ```
-    This command directly clones the repository into your GNOME Shell extensions directory.
-
-2.  **Compile GSettings schemas:**
-    ```bash
-    glib-compile-schemas ~/.local/share/gnome-shell/extensions/cornercraft@dudumaroja/schemas/
-    ```
-    This step is crucial for the extension's settings to be recognized by GNOME.
-
-3.  **Restart GNOME Shell:**
-    *   **X11:** Press `Alt` + `F2`, type `r` (or `restart`), and press `Enter`.
-    *   **Wayland:** You will need to log out and log back in.
-
-4.  **Enable the extension:**
-    ```bash
-    gnome-extensions enable cornercraft@dudumaroja
-    ```
+(Installation instructions will go here, referencing the `install.sh` script)
 
 ## Usage
 
-After installation, open the CornerCraft preferences through the GNOME Extensions application:
+After installation:
 
 1.  **Corner Radius Section:**
-    *   **Windows radius:** Use the slider to set the desired `border-radius` in pixels (0-100) for general windows and most UI elements.
-    *   **Radio, Switch radius:** Use the slider to set the `border-radius` in pixels (0-100) specifically for radio buttons, switches, and sliders.
-
+    *   Use the individual sliders (0-100 pixels) to set the desired `border-radius` for each element type.
+    *   Toggle the "Lock all values" switch to synchronize all sliders to the "Windows radius" value.
 2.  **Actions Section:**
-    *   **Set:** Click this button to apply your chosen corner radii. The extension will inject the necessary CSS into `~/.config/gtk-3.0/gtk.css` and `~/.config/gtk-4.0/gtk.css`.
-    *   **Restore Defaults:** Click this button to revert all corner radii settings to Adwaita's default values (12px for both). This will also remove the injected CSS from your GTK configuration files.
+    *   **Set:** Click this button to apply your chosen corner radii to your system's `gtk.css` files.
+    *   **Restore Defaults:** Click this button to revert all corner radii settings to Adwaita's default values (12px).
     *   **Adwaita Default Values:** Provides a quick reference for the default radii.
 
 ## Development

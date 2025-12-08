@@ -1,0 +1,57 @@
+# English translations for cornercraft
+# Copyright (C) 2023 dudumaroja
+# This file is distributed under the same license as the cornercraft package.
+# dudumaroja <dudumaroja@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cornercraft 1.0\n"
+"Report-Msgid-Bugs-To: dudumaroja@gmail.com\n"
+"POT-Creation-Date: 2023-12-08 15:34-0300\n"
+"PO-Revision-Date: 2023-12-08 15:34-0300\n"
+"Last-Translator: dudumaroja <dudumaroja@gmail.com>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main.py:46
+msgid "CornerCraft"
+msgstr "CornerCraft"
+
+#: main.py:58
+msgid "Corner Radius"
+msgstr "Corner Radius"
+
+#: main.py:62
+msgid "Lock all values"
+msgstr "Lock all values"
+
+#: main.py:70
+msgid "Windows radius"
+msgstr "Windows radius"
+
+#: main.py:78
+msgid "Radio, Switch radius"
+msgstr "Radio, Switch radius"
+
+#: main.py:86
+msgid "Buttons radius"
+msgstr "Buttons radius"
+
+#: main.py:94
+msgid "Text Inputs radius"
+msgstr "Text Inputs radius"
+
+#: main.py:102
+msgid "Menus and Popovers radius"
+msgstr "Menus and Popovers radius"
+
+#: main.py:113
+msgid "Set"
+msgstr "Set"
+
+#: main.py:117
+msgid "Restore Defaults"
+msgstr "Restore Defaults"

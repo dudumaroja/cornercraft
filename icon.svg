@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" />
+<sodipodi:namedview
+   id="namedview3"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.87109375"
+   inkscape:cx="528.64574"
+   inkscape:cy="256"
+   inkscape:window-width="1902"
+   inkscape:window-height="993"
+   inkscape:window-x="26"
+   inkscape:window-y="23"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg3" />
+<!-- Purple background -->
+<rect
+   x="0"
+   y="0"
+   width="512"
+   height="512"
+   fill="#7b4dff"
+   id="rect1"
+   ry="53.955158" />
+<!-- Outer rounded square frame -->
+<rect
+   x="30.807428"
+   y="30.807426"
+   width="451.53308"
+   height="452.68109"
+   rx="44.808926"
+   ry="41.824162"
+   fill="none"
+   stroke="#e4e8ff"
+   stroke-width="39.588"
+   id="rect2" />
+<!-- Corner holes -->
+<rcle
+   cx="136"
+   cy="136"
+   r="8"
+   fill="#7b4dff" />
+
+  ircle cx=&quot;396&quot; cy=&quot;136&quot; r=&quot;8&quot; fill=&quot;#7b4dff&quot;/&gt;
+  ircle cx=&quot;136&quot; cy=&quot;396&quot; r=&quot;8&quot; fill=&quot;#7b4dff&quot;/&gt;
+  <rcle
+   cx="396"
+   cy="396"
+   r="8"
+   fill="#7b4dff" />
+<!-- Vertical inner divider -->
+<line
+   x1="256"
+   y1="132"
+   x2="256"
+   y2="396"
+   stroke="#e4e8ff"
+   stroke-width="24"
+   stroke-linecap="round"
+   id="line2" />
+<!-- Horizontal inner divider on the right -->
+<line
+   x1="270.13733"
+   y1="256"
+   x2="484.03305"
+   y2="256"
+   stroke="#e4e8ff"
+   stroke-width="29.6652"
+   stroke-linecap="round"
+   id="line3" />
+</svg>
