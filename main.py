@@ -183,12 +183,12 @@ class MainWindow(Gtk.ApplicationWindow):
 
         # Cria o conteúdo do CSS.
         css = f"""
-/* Estilos do CornerCraft */
+/* CornerCraft start*/
 * {{
     border-radius: {windows_radius}px;
 }}
 
-radio, switch, scale {{
+radio, switch, slider {{
     border-radius: {radio_switch_radius}px;
 }}
 
@@ -203,6 +203,7 @@ entry, textview {{
 menu, popover {{
     border-radius: {menus_popovers_radius}px;
 }}
+/* CornerCraft end*/
 """
         # Se restore for True, o CSS é definido como uma string vazia.
         if restore:
