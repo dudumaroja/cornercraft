@@ -168,58 +168,77 @@ class MainWindow(Gtk.ApplicationWindow):
 
     # Método que aplica o CSS.
     def apply_css(self, restore=False):
-        # Obtém o diretório home do usuário.
+        # <-- aqui entra A NOVA VERSÃO que só mexe no bloco CornerCraft
         home = os.path.expanduser("~")
-        # Define os caminhos para os arquivos gtk.css do GTK3 e GTK4.
         gtk3_css_path = os.path.join(home, ".config/gtk-3.0/gtk.css")
         gtk4_css_path = os.path.join(home, ".config/gtk-4.0/gtk.css")
 
-        # Obtém os valores dos SpinButtons.
         windows_radius = self.windows_spin.get_value_as_int()
         radio_switch_radius = self.radio_switch_spin.get_value_as_int()
         buttons_radius = self.buttons_spin.get_value_as_int()
         text_inputs_radius = self.text_inputs_spin.get_value_as_int()
         menus_popovers_radius = self.menus_popovers_spin.get_value_as_int()
 
-        # Cria o conteúdo do CSS.
-        css = f"""
-/* CornerCraft start*/
+        block_start = "/* CornerCraft start*/"
+        block_end = "/* CornerCraft end*/"
+
+        if not restore:
+            css_block = f"""
+{block_start}
 * {{
-    border-radius: {windows_radius}px;
+  border-radius: {windows_radius}px;
 }}
 
 radio, switch, slider {{
-    border-radius: {radio_switch_radius}px;
+  border-radius: {radio_switch_radius}px;
 }}
 
 button {{
-    border-radius: {buttons_radius}px;
+  border-radius: {buttons_radius}px;
 }}
 
 entry, textview {{
-    border-radius: {text_inputs_radius}px;
+  border-radius: {text_inputs_radius}px;
 }}
 
 menu, popover {{
-    border-radius: {menus_popovers_radius}px;
+  border-radius: {menus_popovers_radius}px;
 }}
-/* CornerCraft end*/
+{block_end}
 """
-        # Se restore for True, o CSS é definido como uma string vazia.
-        if restore:
-            css = ""
-            
-        # Cria os diretórios de configuração se eles não existirem.
-        os.makedirs(os.path.dirname(gtk3_css_path), exist_ok=True)
-        os.makedirs(os.path.dirname(gtk4_css_path), exist_ok=True)
-        
-        # Escreve o CSS no arquivo gtk.css do GTK3.
-        with open(gtk3_css_path, "w") as f:
-            f.write(css)
-            
-        # Escreve o CSS no arquivo gtk.css do GTK4.
-        with open(gtk4_css_path, "w") as f:
-            f.write(css)
+        else:
+            css_block = ""
+
+        def update_file(path: str):
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            try:
+                with open(path, "r") as f:
+                    content = f.read()
+            except FileNotFoundError:
+                content = ""
+
+            start_idx = content.find(block_start)
+            if start_idx != -1:
+                end_idx = content.find(block_end, start_idx)
+                if end_idx != -1:
+                    end_idx += len(block_end)
+                    content = content[:start_idx] + content[end_idx:]
+
+            content = content.strip()
+
+            if css_block.strip():
+                if content:
+                    new_content = content + "\n\n" + css_block.strip() + "\n"
+                else:
+                    new_content = css_block.strip() + "\n"
+            else:
+                new_content = content + ("\n" if content else "")
+
+            with open(path, "w") as f:
+                f.write(new_content)
+
+        update_file(gtk3_css_path)
+        update_file(gtk4_css_path)
 
 
 # Ponto de entrada da aplicação.
