@@ -11,6 +11,9 @@
 
 CornerCraft lets you control how rounded your Adwaita apps look.
 
+<img width="666" height="586" alt="image" src="https://github.com/user-attachments/assets/5bcd5d54-f0f5-4665-b52b-4d11d5df3e6a" />
+
+
 With it, you can set the corner radius of GTK 3 and GTK 4 windows and widgets, from almost square to very round.
 The app does this by writing custom CSS to your ~/.config/gtk-3.0/gtk.css and ~/.config/gtk-4.0/gtk.css files, so your desktop follows the style you choose.
 ## Features
@@ -41,6 +44,9 @@ After installation:
     *   **Set:** Click this button to apply your chosen corner radii to your system's `gtk.css` files.
     *   **Restore Defaults:** Click this button to revert all corner radii settings to Adwaita's default values (12px).
     *   **Adwaita Default Values:** Provides a quick reference for the default radii.
+
+<img width="505" height="608" alt="image" src="https://github.com/user-attachments/assets/6bfae886-87fd-4e4f-a941-14ec8b9905e9" />
+
 
 ## Development
 
